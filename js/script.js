@@ -19,8 +19,8 @@ BUTTON.addEventListener('click', async () => {
                <span class="name">${data[key]["name"]}</span>
            </div>
            <div class="reactions">
-               <span class="views">${data[key]["cost"]}</span>
-               <span class="likes">${data[key]["number"]}</span>
+               <span class="views">Cost ${data[key]["cost"]}</span>
+               <span class="likes">Number ${data[key]["number"]}</span>
            </div>
        </li>`);
    }
