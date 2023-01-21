@@ -1,0 +1,40 @@
+{
+    "TOVARS": {
+        "tovar1": {
+            "name": "drone1",
+            "cost": 12,
+            "number": 55,
+            "avatar": "../img/q1.png"
+        },
+        "tovar2": {
+            "name": "drone2",
+            "cost": 78,
+            "number": 5,
+            "avatar": "../img/q2.png"
+        },
+        "tovar3": {
+            "name": "drone3",
+            "cost": 2,
+            "number": 550,
+            "avatar": "../img/q3.png"
+        },
+        "tovar4": {
+            "name": "drone4",
+            "cost": 222,
+            "number": 95,
+            "avatar": "../img/q4.png"
+        },
+        "tovar5": {
+            "name": "drone5",
+            "cost": 41,
+            "number": 55,
+            "avatar": "../img/q5.png"
+        },
+        "tovar6": {
+            "name": "drone6",
+            "cost": 41,
+            "number": 55,
+            "avatar": "../img/q6.png"
+        }
+    }
+}
