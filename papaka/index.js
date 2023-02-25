@@ -1,47 +1,41 @@
-//const lodash = require('lodash')
 const fs = require('fs')
+const zlib = require('zlib')
 
-fs.writeFileSync('./index.html', `
-<!DOCTYPE html>
-<html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
-</head>
-<body>
-   
-</body>
-</html>`, () => {})
+/* const read = fs.createReadStream('./lorem.txt')
+const write = fs.createWriteStream('./new.txt') */
 
-fs.mkdirSync('./styles', () => {
-   fs.writeFileSync('./styles/style.css', `
-   * {
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-   }
-  
-   html,
-   body {
-      height: 100%;
-   }
-  
-   body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-   }`, () => {})
-})
+//? №1
+/* read.on('data', (chunk) => {
+    write.write('\n************\n')
+    write.write(chunk)
+    write.write('\n************\n')
+}) */
 
-setTimeout(() => {
-   fs.unlink('./styles/style.css', () => {})
-}, 15000);
-setTimeout(() => {
-   fs.rmdir('./styles', () => {})
-}, 17000);
+//? №2
+/* let a = 1;
+read.on('data', (chunk) => {
+    write.write(`\nЧасть №${a} началась\n`)
+    write.write(chunk)
+    write.write(`\nЧасть №${a} закончилась\n`)
+    a++;
+}) */
 
-setTimeout(() => {
-   fs.unlink('./index.html', () => {})
-}, 20000);
+//? №3
+/* const compress = () => {
+    const gzip = zlib.createGzip();
+    const input = fs.createReadStream('./index.html');
+    const output = fs.createWriteStream('./indexCompress.html.gz');
+    input.pipe(gzip).pipe(output);
+}
+
+setTimeout(() => {compress()},3000); */
+
+//? №4
+/* const decompress = () => {
+    const unzip = zlib.createUnzip();
+    const inputdecom= fs.createReadStream('./indexCompress.html.gz')
+    const outputdecom = fs.createWriteStream('./indexDecompress.html')
+    inputdecom.pipe(unzip).pipe(outputdecom);
+}
+
+setTimeout(() => {decompress()},3000); */

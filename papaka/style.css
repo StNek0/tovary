@@ -1,0 +1,75 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul>li {
+    list-style: none;
+}
+
+.container {
+    width: 1000px;
+    height: 500px;
+    border: 2px solid black;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 40px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+li {
+    height: 80px;
+    width: 100%;
+    background: black;
+    color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: 2px solid red;
+    font-size: 28px;
+
+}
+
+span {
+    padding: 5px;
+    border: 2px solid red;
+    margin-left: 2px
+}
+
+li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+img {
+    width: 50px;
+    margin-right: 15px;
+}
+
+.info,
+.reactions {
+    display: flex;
+    align-items: center;
+}
+
+.likes, .dislikes{
+    cursor: pointer;
+}
